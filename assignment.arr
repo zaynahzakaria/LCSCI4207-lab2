@@ -1,1 +1,1 @@
-import file("lab2-support.arr") as S
+import file("lab2-support.arr") as support
