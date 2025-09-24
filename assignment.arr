@@ -2,7 +2,7 @@ import file("lab2-support.arr") as support
 
 s = "HELLO world"
 s2 = "abcdefghijklmnopqrstuvwxyz"
-s3 = "london"
+s3 = "100"
 
 #repeats the string 5 times
 support.encryptor1(s)
@@ -12,7 +12,7 @@ support.encryptor1(s2)
 support.encryptor2(s)
 support.encryptor2(s2)
 
-# ...
+# returns the string as it is
 support.encryptor3(s)
 support.encryptor3(s2)
 support.encryptor3(s3)
@@ -37,7 +37,7 @@ support.encryptor7(s2)
 support.encryptor8(s)
 support.encryptor8(s2)
 
-# looks at first letter or number of the string and returns a number ...
+# looks at first letter or number of the string and returns a number to a character code which is a number corresponding to its Unicode point
 support.encryptor9(s)
 support.encryptor9(s2)
 support.encryptor9(s3)
@@ -48,9 +48,22 @@ support.encryptor10(s2)
 
 
 
+# my recreation of the function
+fun my-encryptor1(m :: String) -> String:
+  doc: "capitalizes the string and repeats it 3 times"
+  string-to-upper(string-repeat(m, 3))
+end 
+
+# calling my-encryptor with variety of sample strings
+my-encryptor1("one")
+my-encryptor1("hello world")
+my-encryptor1("london")
 
 
-
-
-
+# encryptor tester for my function
+  check:
+  my-encryptor1("northeastern") is "NORTHEASTERNNORTHEASTERNNORTHEASTERN"
+  my-encryptor1("ABCD") is "ABCDABCDABCD"
+  my-encryptor1("lab") is "LABLABLAB"
+end
 
