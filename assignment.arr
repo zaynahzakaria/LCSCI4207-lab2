@@ -59,8 +59,10 @@ my-encryptor1("one")
 my-encryptor1("hello world")
 my-encryptor1("london")
 
+# passing my function to the provided tester
+support.test-encryptor1(my-encryptor1)
 
-# encryptor tester for my function
+# testing my function
   check:
   my-encryptor1("northeastern") is "NORTHEASTERNNORTHEASTERNNORTHEASTERN"
   my-encryptor1("ABCD") is "ABCDABCDABCD"
